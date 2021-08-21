@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev:app": "nodemon app",
+    "lint": "eslint *js stacks/*js",
+    "test": "npm run lint && npm run validate:app",
+    "validate:app": "bash scripts/validateApp.sh"
+  },
+  "dependencies": {
+    "object-hash": "2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "2.24.0",
+    "nodemon": "2.0.12"
+  }
+}

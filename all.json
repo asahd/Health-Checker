@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "App-HealthCheck",
+      "script": "app.js",
+      "cwd": "/home/ubuntu/health-checker",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "node_args": "--max-old-space-size=50 --max-semi-space-size=2",
+      "max_memory_restart": "100M"
+    }
+  ]
+}
