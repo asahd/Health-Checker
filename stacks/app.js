@@ -12,13 +12,13 @@ const stacks = [
   //
   {
     stackId: 'stack-one',
-    hostname: 'stack-one.example.org',
+    baseURL: 'stack-one.example.org',
     authorization: 'a2V5OnNlY3JldA==',
     timeoutSecs: 2,
   },
   {
     stackId: 'stack-two',
-    hostname: 'stack-two.example.org',
+    baseURL: 'stack-two.example.org',
     authorization: 'a2V5OnNlY3JldA==',
     timeoutSecs: 2,
   },

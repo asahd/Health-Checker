@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 appFile='stacks/app.js'
 appStackCount=$(grep -c '    stackId:' "$appFile")
-appTotalKeysCount=$(grep -cE '    stackId:|    hostname:|    authorization:|    timeoutSecs:' "$appFile")
+appTotalKeysCount=$(grep -cE '    stackId:|    baseURL:|    authorization:|    timeoutSecs:' "$appFile")
 appKeysCount=4
 
 if [[ "$(("$appStackCount" * "$appKeysCount"))" -ne "$appTotalKeysCount" ]]; then
