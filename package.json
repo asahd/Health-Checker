@@ -1,20 +1,20 @@
 {
   "scripts": {
-    "dev:app": "NODE_ENV=development nodemon app",
-    "lint": "eslint *js stacks/*js",
-    "test": "npm run lint && npm run validate:app",
-    "validate:app": "bash scripts/validateApp.sh"
+    "dev": "node --watch app.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "validate": "node scripts/validateStacks.js",
+    "test:unit": "node --test \"test/**/*.test.js\"",
+    "test": "npm run lint && npm run format:check && npm run validate && npm run test:unit"
   },
   "engines": {
-    "node": "18.x"
-  },
-  "dependencies": {
-    "object-hash": "3.0.0"
+    "node": ">=24"
   },
   "devDependencies": {
-    "eslint": "8.48.0",
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-plugin-import": "2.28.1",
-    "nodemon": "3.0.1"
+    "@eslint/js": "10.0.1",
+    "eslint": "10.13.0",
+    "globals": "17.13.0",
+    "prettier": "3.9.10"
   }
 }

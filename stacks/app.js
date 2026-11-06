@@ -1,3 +1,11 @@
+const appCheck = {
+  method: 'POST',
+  path: '/data',
+  body: [],
+  timeoutSecs: 2,
+  slowSecs: 1,
+};
+
 const stacks = [
   // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
   // +           US East (N. Virginia) [us-east-1]           +
@@ -11,16 +19,15 @@ const stacks = [
   //
   //
   {
+    ...appCheck,
     stackId: 'stack-one',
     baseURL: 'stack-one.example.org',
-    authorization: 'a2V5OnNlY3JldA==',
-    timeoutSecs: 2,
+    authorizationEnv: 'STACK_ONE_AUTHORIZATION',
   },
   {
+    ...appCheck,
     stackId: 'stack-two',
     baseURL: 'stack-two.example.org',
-    authorization: 'a2V5OnNlY3JldA==',
-    timeoutSecs: 2,
   },
 ];
 
